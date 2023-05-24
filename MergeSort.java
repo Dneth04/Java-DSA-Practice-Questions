@@ -1,10 +1,11 @@
 public class MergeSort {
     public static void conquer(int arr[], int si, int mid, int ei) {
         int merged[] = new int[ei - si + 1];
-        int ind1 = si;
-        int ind2 = mid + 1;
+        int ind1 = si; // starting index of array1 end=mid
+        int ind2 = mid + 1; // starting index of array2 end=ei
         int x = 0;
-        while (ind1 <= mid && ind2 <= ei) {
+        while (ind1 <= mid && ind2 <= ei) { // merging happens until index vales are less than total elements in arr1
+                                            // &arr2
             if (arr[ind1] < arr[ind2]) {
                 merged[x++] = arr[ind1];
                 ind1++;
